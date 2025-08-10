@@ -121,7 +121,8 @@ a {
 }
 .conteudo {
     width: 95%;
-    height: 60vh;
+    min-height: 60vh;
+    height: 100%;
     background-color: #F5F5DC;
     margin: 2% 0;
     padding: 2%;
@@ -177,4 +178,5 @@ a {
     font-family: "lato", Arial, Helvetica, sans-serif;
     font-size: clamp(1rem, 2vw, 1.5rem);
 }
+
 /*lato lora Merriweather Montserrat*/
