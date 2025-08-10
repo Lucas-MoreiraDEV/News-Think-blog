@@ -1,0 +1,14 @@
+<%- include('partials/cabecalho') %>
+
+<main class="conteudo">
+    <form class="postformulario" action="/submit/confirm", method="post">
+        <label for="titulo">Titulo da Mensagem</label>
+        <input type="text", id="titulo", class="post__formulario__inputs", name="titulo", required>
+
+        <label for="texto">Digite a Mensagem</label>
+        <textarea class="postformulario__inputtext post__formulario__inputs" id="texto", name="texto", required></textarea>
+        <button type="submit">Enviar Post</button>
+    </form>
+</main>
+
+<%- include('partials/rodape') %>

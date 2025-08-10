@@ -1,0 +1,24 @@
+<%- include('partials/cabecalho') %>
+
+    <main class="conteudo">
+
+
+
+        <% if (locals.posts && locals.posts.length > 0) {%>
+            <% for (let i=locals.posts.length; i> 0; i--) {%>
+                <a href="/editar?id=<%= posts[i - 1].id%>" class="conteudo__post">
+                    <h3 class="conteudo__post--data">Horario <%= posts[i - 1].horarioFormatado + " Data " + posts[i - 1].dataFormatada%></h3>
+                    <h2 class="conteudo__post--titulo">
+                        <%= posts[i - 1].titulo %>
+                    </h2>
+                    <p class="conteudo__post--texto">
+                        <%= posts[i - 1].texto %>
+                    </p>
+                </a>
+                <% } %>
+            <% } else { %>
+                <p class="conteudo__aviso">Nenhum post encontrado.</p>
+                <% } %>
+    </main>
+
+    <%- include('partials/rodape') %>
