@@ -1,10 +1,11 @@
 import express from 'express';
+import path from "path";
 
 const servidor = express();
 const porta = process.env.PORT || 3000;
 
 servidor.set('view engine', 'ejs');
-servidor.use(express.static('public'));
+servidor.use(express.static(path.join(__dirname, 'public')));
 servidor.use(express.urlencoded({ extended: true }));
 
 let id = 0
